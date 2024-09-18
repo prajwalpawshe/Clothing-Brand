@@ -1,0 +1,749 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Make sure the height is 100% of the viewport height */
+    background-image: url('./image/logo/WhatsApp\ Image\ 2024-09-18\ at\ 18.03.35_01edadac.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background image stay fixed during scroll */
+    font-family: Arial, sans-serif;
+    color: white; /* Adjust text color based on your background image */
+    background-image: cross-fade(1);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    float: right;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Home Section */
+.home {
+    height: 100vh;
+    background: url('images/fashion-background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.home h1 {
+    font-size: 4em;
+    animation: fadeIn 2s ease;
+    color: #000;
+}
+
+.home p {
+    font-size: 1.5em;
+    margin-top: 15px;
+    animation: fadeIn 3s ease;
+    color: #000;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+
+.btn:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
+/* Founders Section */
+.founders {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.founder-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.founder {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.founder:hover {
+    transform: scale(1.05);
+}
+
+/* Image container with overlay */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hidden name overlay */
+.name-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.name-overlay h3 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Show name on hover */
+.image-container:hover .name-overlay {
+    opacity: 1;
+}
+
+
+/* Brand Story Section */
+.brand {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.brand p {
+    margin-bottom: 40px;
+    font-size: 1.5em;
+    color: #666;
+}
+
+.brand-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.value-item {
+    width: 30%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #f8f8f8;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: scale(1.05);
+}
+
+.value-item i {
+    font-size: 50px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #333;
+}
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Flexbox for Form Inputs */
+.form-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px 20px 15px 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+
+
+/*brand photos */
+.container1{
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.container1 img{
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid white ;
+    transition: all ease-in-out 0.5s;
+
+}
+.container1 img:hover{
+    width: 25%;
+}
+
+
+
+
+/* Contact Button */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(0);
+}
+
+/* 3D Button */
+.btn.three-d-btn {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(0);
+}
+
+.btn.three-d-btn:hover {
+    background-color: #333;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+}
+
+/* Pulsing Button */
+.btn.pulse-btn {
+    background-color: #ff9c00;
+    color: #fff;
+    box-shadow: 0 0 0 rgba(255,255,255,0.5);
+}
+
+.btn.pulse-btn:hover {
+    box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 rgba(255,255,255,0.5); }
+    50% { box-shadow: 0 0 15px rgba(255,255,255,0.8); }
+    100% { box-shadow: 0 0 0 rgba(255,255,255,0.5); }
+}
+
+
+/* Founders Section */
+.founders {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.founder-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.founder {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.founder:hover {
+    transform: scale(1.05);
+}
+
+
+/* Image container with overlay */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hidden name overlay */
+.name-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+
+/* Show name on hover */
+.image-container:hover .name-overlay {
+    opacity: 1;
+}
+
+
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff9c00; /* Highlight color */
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.btn.hero-btn {
+    background-color: #ff9c00;
+    color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn.hero-btn:hover {
+    background-color: #e68a00;
+}
+
+/* About Section */
+img {
+    border-radius: 10px; /* Apply rounded corners to all images */
+    display: block; /* Remove bottom space/gap */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image covers container without distortion */
+}
+.about {
+    background: #f4f4f4;
+    padding: 80px 0;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Founders Section */
+.founders {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.founder-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 10px; /* Space between founder cards */
+}
+
+.founder {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.founder:hover {
+    transform: scale(1.05);
+}
+
+/* Image container with overlay */
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hidden name overlay */
+.name-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.name-overlay h3 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Show name on hover */
+.image-container:hover .name-overlay {
+    opacity: 1;
+}
+
+/* Sparkle Effect for Buttons */
+.btn.sparkle-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn.sparkle-btn:hover {
+    background-color: #555;
+}
+
+.btn.sparkle-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: sparkle 1.5s infinite;
+}
+
+.btn.sparkle-btn:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes sparkle {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    50% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -50%) scale(0); }
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Flexbox for Form Inputs */
+.form-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px 20px 15px 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #333;
+    background-color: #fff;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.btn.submit-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.submit-btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+
+
+
+
